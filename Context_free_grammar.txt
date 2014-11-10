@@ -1,0 +1,56 @@
+
+The grammar given in the problem statement has been modified for LL(1) parsing. The modified grammar is as follows.
+The grammar is formed in a way that global variables should be declared before function declaration/definition.
+
+<Program> ->  void ID( <Function Definition> | <type> ID <Function or Data declaration> |$
+<Function or Data Declaration> ->  (<Function Definition> | [ <expression> ] <Declaration> |							<Declaration>
+<Declaration> -> comma <ID List><Program> | semicolon<Program>
+<Function Definition> -> <Parameter List> ) <Function-Body>  <Function-List>
+<Function-Body> -> ; | { <Data declaration> <statements>
+<Function-List> ->  $ | void ID( <Function Definition> | <type> ID <Function Definition>
+<Parameter List> -> void | <Non empty Param List>
+<Non empty Param List> -> <type> ID <Non empty Param List>'
+<Non empty Param List>' -> , <Non empty Param List> | $
+<type> -> int
+<ID List> -> <id> <ID List>' ;
+<ID List>' -> ,<id><ID List>' | $
+<id> -> ID <id>'
+<id>' -> [ <expression> ] | $
+<Data declaration> -> <type><ID List><Data declaration> | $
+<statements> -> } | <statement><statements>
+<statement> -> printf<printf> | scanf<scanf>|if<if>| while<while>|return<return>| break<break>|continue<continue> | ID <assign or function call>
+<assign or function call> -> [<expression> ] = <expression> | = <expression> | ( <expresion-list> )
+<expression-list> -> <expression> <expression-list>'
+<expression-list>' -> , <expression><expression-list>' | $
+<printf> -> ( STRING  <printf>' ) ; 
+<printf>' -> , <expression> | $
+<scanf> -> ( STRING, & <expression> ) ; 
+<if> -> ( <condition-expression> ) <block><if>'
+<if>' -> else <block> | $
+<while> -> ( <condition-expression> ) <block>
+<return> -> <return>'
+<return>' -> ; | <expression>
+<break> ->;
+<continue> -> ;
+<block>-> { <statements>
+<condition-expression> -> <condition><condition>'
+<condition>' -> <condition-op><condition> | $
+<condition> -> <expression><compare-op><expression>
+<condition-op> -> && | ||
+<comparison op> -> == | != | > | >= | < | <= 
+<expression> -> <terminal><expression>'
+<expression>' ->  <add-op><terminal><expression>' |  $
+<terminal> -> <factor><terminal>'
+<terminal>' -> <mult-op><factor><terminal>' | $
+<add-op> -> + | -
+<mult-op> -> * | /
+<factor> -> ID <ID'>| <NUM> | (<expression>) | $
+<ID>' -> [ <expression> ] | (<expression list>)
+<NUM> -> -NUMBER | NUMBER
+
+
+Source code:
+1. The code for the compiler is in LLParser.java
+2. Comments are present with every variable and function. The grammar rules implemented in the functions are also mentioned in the comments
+3. Scanner code has been modified to accommodate else statement as a keyword.
+

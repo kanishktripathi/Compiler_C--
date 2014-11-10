@@ -1,0 +1,156 @@
+CS254 Test Result:
+
+ab.c
+========
+19 s= 1
+
+automaton.c
+==============
+
+Give me a number (-1 to quit): 2
+I need a number that's either 0 or 1.
+Give me a number (-1 to quit): 4
+I need a number that's either 0 or 1.
+Give me a number (-1 to quit): 12
+I need a number that's either 0 or 1.
+Give me a number (-1 to quit): 1
+Give me a number (-1 to quit): 0
+Give me a number (-1 to quit): 1
+Give me a number (-1 to quit): 0 
+Give me a number (-1 to quit): -1
+You gave me an even number of 0's.
+You gave me an even number of 1's.
+I therefore accept this input.
+
+binrep.c
+=========
+
+Give me a number: 46
+The binary representation of: 46
+is: 101110
+
+Give me a number: 8
+The binary representation of: 8
+is: 1000
+
+Give me a number: 1024
+The binary representation of: 1024
+is: 10000000000
+
+
+fibonacci.c
+============
+
+The first few digits of the Fibonacci sequence are:
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+75025
+121393
+196418
+317811
+514229
+832040
+1346269
+2178309
+
+loop_for.c
+==============
+The compiler gives a parsing exception as the grammar currently does not support for loop.
+
+loop_while.c
+=============
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+
+
+mandel.c
+============
+
+This program compiled but did not run successfully
+
+MeaningOfLife.c
+================
+
+Magic positive number is 12
+The meaning of Life is 42
+
+
+tax.c
+=================
+
+Welcome to the United States 1040 federal income tax program.
+(Note: this isn't the real 1040 form. If you try to submit your
+taxes this way, you'll get what you deserve!
+
+Answer the following questions to determine what you owe.
+
+Total wages, salary, and tips? 23456
+Taxable interest (such as from bank accounts)? 12^Z
+[1]+  Stopped                 ./tax
+ktripath@ktripath:~/cs454/test_files$ ./tax
+Welcome to the United States 1040 federal income tax program.
+(Note: this isn't the real 1040 form. If you try to submit your
+taxes this way, you'll get what you deserve!
+
+Answer the following questions to determine what you owe.
+
+Total wages, salary, and tips? 50000
+Taxable interest (such as from bank accounts)? 10
+Unemployment compensation, qualified state tuition, and Alaska
+Permanent Fund dividends? 1000
+Your adjusted gross income is: 51010
+Enter <1> if your parents or someone else can claim you on their return. 
+Enter <0> otherwise: 0
+Enter <1> if you are single, <0> if you are married: 1
+Your taxable income is: 38060
+Enter the amount of Federal income tax withheld: 1000
+Enter <1> if you get an earned income credit (EIC); enter 0 otherwise: 1
+OK, I'll give you a thousand dollars for your credit.
+Your total tax payments amount to: 2000
+Your total tax liability is: 10657
+Bummer. You owe the IRS a check for $8657
+38060
+2000
+10657
+32767
+4197360
+0
+0
+0
+Thank you for using ez-tax.
+
+
+
+
+
+
